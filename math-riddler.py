@@ -132,19 +132,19 @@ while working == "yes":
         while WorkState != "exit":
         
             numbers = int(numbers)
-            substract = random.randint(1, numbers)
-            substractFrom = random.randint(1, numbers)
+            subtract = random.randint(1, numbers)
+            subtractFrom = random.randint(1, numbers)
             checkStr = False
             while checkStr == False:
                 print(substract, "-", substractFrom, "= ?" )
                 result = input("(type in the result (number), \"exit\" without the quotes to end riddles): ")
                 if any(str.isdigit(c) for c in result) == True: 
                     result = int(result)
-                    if result == (substract - substractFrom):
+                    if result == (subtract - subtractFrom):
                         print("Correct!")
                         correct += 1
                         checkStr = True
-                    elif result != (substract - substractFrom):
+                    elif result != (subtract - subtractFrom):
                         print("Wrong.")
                         wrong += 1
                         checkStr = True
